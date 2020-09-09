@@ -100,14 +100,13 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 Hint: You can use .splice() for this
 
 */
-
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(originalFlavors, flavor) {
+    const flavorIndex = originalFlavors.indexOf(flavor);
+    if (flavorIndex > -1) {
+        originalFlavors.splice(flavorIndex, 1)
+    }
+    console.log(originalFlavors)
 }
-
-
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
 Your function should accept: 
